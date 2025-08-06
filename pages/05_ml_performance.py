@@ -44,4 +44,7 @@ st.write("---")
 st.write("### Generalised Performance on Test Set")
 
 test_results = load_test_evaluation(version)
-st.dataframe(pd.DataFrame(test_results, index=['Loss', 'Accuracy']))
+col1, col2 = st.columns([1, 1])
+
+with col1:
+    st.dataframe(pd.DataFrame(test_results, index=['Loss', 'Accuracy']))

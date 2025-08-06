@@ -53,6 +53,7 @@ if images_buffer is not None:
         df_report = df_report._append(
             {"Name": image.name, "Result": pred_class}, ignore_index=True
         )
+        st.markdown("---")
 
     if not df_report.empty:
         st.success("Detection Report")

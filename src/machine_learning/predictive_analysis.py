@@ -32,7 +32,7 @@ def plot_predictions_probabilities(pred_proba, pred_class):
         range_y=[0, 1],
         width=600, height=300, template='seaborn')
     random_key = f"plot_{uuid.uuid4().hex}"
-    st.plotly_chart(fig, key=random_key)
+    st.plotly_chart(fig, use_container_width=False, key=random_key)
 
 
 def resize_input_image(img, version):
